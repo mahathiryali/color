@@ -70,22 +70,22 @@ var person = 0;
 while(extra > 0) {
   //  person = Math.round(Math.random()*5 + 1);
   //  sorted[colors[extra-1]].push(people[person]);
-  if(person === 1 && sorted.Red.length < group) {
+  if(orted.Red.length < group) {
     sorted.Red.push(people[extra]);
   }
-  else if(person === 2 && sorted.Orange.length < group) {
+  else if(sorted.Orange.length < group) {
     sorted.Orange.push(people[extra]);
   }
-  else if(person === 3 && sorted.Yellow.length < group) {
+  else if(sorted.Yellow.length < group) {
     sorted.Yellow.push(people[extra]);
   } 
-  else if(person === 4 && sorted.Green.length < group) {
+  else if(sorted.Green.length < group) {
     sorted.Green.push(people[extra]);
   }
-  else if(person === 5 && sorted.Blue.length < group) {
+  else if(sorted.Blue.length < group) {
     sorted.Blue.push(people[extra]);
   }
-  else if(person === 6 && sorted.Purple.length < group) {
+  else if(sorted.Purple.length < group) {
     sorted.Purple.push(people[extra]);
   }
   extra --;
