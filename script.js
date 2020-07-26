@@ -68,7 +68,7 @@ console.log(group);
 // }
 var person = 0;
 while(extra > 0) {
-   person = Math.round(Math.random()*5 + 1);
+  //  person = Math.round(Math.random()*5 + 1);
   //  sorted[colors[extra-1]].push(people[person]);
   if(person === 1 && sorted.Red.length < group) {
     sorted.Red.push(people[extra]);
