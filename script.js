@@ -4,7 +4,7 @@ var colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple"];
 
 var group = Math.round(people.length/colors.length);
 var sorted = {};
-var extra = people.length % colors.length;
+var extra = [];
 
 //creates empty arrays for each color
 colors.forEach(function(color){
@@ -37,7 +37,7 @@ for(var i = 0; i < people.length; i ++) {
     sorted.Purple.push(people[i]);
   }
   else {
-    continue;
+    extra.push(i);
   }
 }
 console.log(group);
@@ -66,32 +66,50 @@ console.log(group);
 //     continue;
 //   }
 // }
-var person = 0;
-while(extra > 0) {
-  //  person = Math.round(Math.random()*5 + 1);
-  //  sorted[colors[extra-1]].push(people[person]);
-  if(orted.Red.length < group) {
-    sorted.Red.push(people[extra]);
+// while(extra > 0) {
+//   //  person = Math.round(Math.random()*5 + 1);
+//   //  sorted[colors[extra-1]].push(people[person]);
+//   if(sorted.Red.length < group) {
+//     sorted.Red.push(people[extra]);
+//   }
+//   else if(sorted.Orange.length < group) {
+//     sorted.Orange.push(people[extra]);
+//   }
+//   else if(sorted.Yellow.length < group) {
+//     sorted.Yellow.push(people[extra]);
+//   } 
+//   else if(sorted.Green.length < group) {
+//     sorted.Green.push(people[extra]);
+//   }
+//   else if(sorted.Blue.length < group) {
+//     sorted.Blue.push(people[extra]);
+//   }
+//   else if(sorted.Purple.length < group) {
+//     sorted.Purple.push(people[extra]);
+//   }
+//   extra --;
+// }
+
+extra.forEach(function(num) {
+  if(sorted.Red.length < group) {
+    sorted.Red.push(people[num]);
   }
   else if(sorted.Orange.length < group) {
-    sorted.Orange.push(people[extra]);
+    sorted.Orange.push(people[num]);
   }
   else if(sorted.Yellow.length < group) {
-    sorted.Yellow.push(people[extra]);
+    sorted.Yellow.push(people[num]);
   } 
   else if(sorted.Green.length < group) {
-    sorted.Green.push(people[extra]);
+    sorted.Green.push(people[num]);
   }
   else if(sorted.Blue.length < group) {
-    sorted.Blue.push(people[extra]);
+    sorted.Blue.push(people[num]);
   }
   else if(sorted.Purple.length < group) {
-    sorted.Purple.push(people[extra]);
+    sorted.Purple.push(people[num]);
   }
-  extra --;
-}
-
-
+})
 console.log(numbers.length);
 console.log(sorted.Red.length + sorted.Orange.length + sorted.Yellow.length + sorted.Green.length + sorted.Blue.length + sorted.Purple.length);
 console.log(people.length);
